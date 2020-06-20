@@ -10,10 +10,15 @@ public class Converter {
         return value / 60;
     }
 
+    public static boolean testing(int in, int expected, int out) {
+        return expected == out;
+    }
+
     public static void main(String[] args) {
-        int euro = Converter.rubleToEuro(140);
-        int dollar = Converter.rubleToDollar(120);
-        System.out.println("140 rubles are " + euro + " euro.");
-        System.out.println("120 rubles are " + dollar + " dollars.");
+        System.out.println("140 rubles are " + rubleToEuro(140) + " euro.");
+        System.out.println("240 rubles are " + rubleToDollar(240) + " dollars.");
+
+        System.out.println("140 rubles are 2 euro. Test result : " + testing(140, 2, rubleToEuro(140)));
+        System.out.println("240 rubles are 4 dollars. Test result : " + testing(240, 4, rubleToDollar(240)));
     }
 }
