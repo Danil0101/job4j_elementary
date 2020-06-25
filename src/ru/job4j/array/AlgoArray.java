@@ -12,18 +12,14 @@ public class AlgoArray {
         }
 
         System.out.println();
-        boolean wasExchange = true;
-        while (wasExchange) {
-            wasExchange = false;
-            for (int i = 0; i < array.length - 1; i++) {
-                if (array[i] > array[i + 1]) {
-                    array[i] += array[i + 1];
-                    array[i + 1] = array[i] - array[i + 1];
-                    array[i] -= array[i + 1];
-                    wasExchange = true;
-                }
-            }
-        }
+
+        temp = array[1];
+        array[1] = array[2];
+        array[2] = temp;
+
+        temp = array[3];
+        array[3] = array[4];
+        array[4] = temp;
 
         for (int index = 0; index < array.length; index++) {
             System.out.println(array[index]);
