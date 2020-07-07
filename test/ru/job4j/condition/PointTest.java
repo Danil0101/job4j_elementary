@@ -20,4 +20,11 @@ public class PointTest {
         Point b = new Point(50, 50);
         Assert.assertEquals(56.568, a.distance(b), 0.001);
     }
+
+    @Test
+    public void whenDistanceX1Y1Z1TenX2Y2Z2FiftyThenFiftySix() {
+        Point a = new Point(10, 10, 10);
+        Point b = new Point(50, 50, 50);
+        Assert.assertEquals(56.568, a.distance(b), 0.001);
+    }
 }
