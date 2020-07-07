@@ -12,12 +12,12 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax10To2Then10() {
-        assertThat(Max.max(10, 2), is(10));
+    public void whenFirst10Second2Third15Then15() {
+        assertThat(Max.max(10, 2, 15), is(15));
     }
 
     @Test
-    public void whenMax5To5Then5() {
-        assertThat(Max.max(5, 5), is(5));
+    public void whenFirst5Second20Third10Fourth6Then20() {
+        assertThat(Max.max(5, 20, 10, 6), is(20));
     }
 }
