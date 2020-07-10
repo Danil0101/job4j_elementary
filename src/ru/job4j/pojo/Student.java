@@ -30,4 +30,13 @@ public class Student {
     public void setReceiptDate(Date receiptDate) {
         this.receiptDate = receiptDate;
     }
+
+    @Override
+    public String toString() {
+        return "Student{"
+                + "Full name='" + getFullName() + '\''
+                + ", Group='" + getGroup() + '\''
+                + ", Receipt date=" + getReceiptDate()
+                + '}';
+    }
 }
