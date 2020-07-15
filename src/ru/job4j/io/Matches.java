@@ -16,13 +16,14 @@ public class Matches {
                 select = Integer.parseInt(input.nextLine());
             }
             numMatches -= select;
-            System.out.println("Осталось спичек: " + numMatches);
             if (numMatches <= 0) {
-                System.out.println("Победил: " + currentPlayer);
+                System.out.println("Спичек не осталось");
             } else {
+                System.out.println("Осталось спичек: " + numMatches);
                 currentPlayer = currentPlayer.equals(players[0]) ? players[1] : players[0];
             }
         }
+        System.out.println("Победил: " + currentPlayer);
     }
 }
 
